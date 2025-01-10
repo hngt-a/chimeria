@@ -32,10 +32,16 @@
           margin: auto;
         }
       }
+      @font-face {
+        /* ① ここにfont-familyで指定したい名前を書く*/
+        font-family: "hibiya";
 
+        /* フォントが置かれているパスを書く */
+        src: url("/font/KH-Dot-Hibiya-24.ttf") format("truetype");
+      }
       body{
         background:black;
-        font-family:'Yu Mincho', serif;
+        font-family:"hibiya",'Yu Mincho', serif;
         color:white;
         background: repeating-linear-gradient(to top, black, rgb(20,20,20) 6px, black 2px);
 
