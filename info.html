@@ -40,6 +40,14 @@
         background: repeating-linear-gradient(to top, black, rgb(20,20,20) 6px, black 2px);
 
       }
+      .bgblink{
+        animation:bgblink 0.005s ease-in-out infinite alternate;
+
+      }
+      @keyframes bgblink{
+          0% {background: repeating-linear-gradient(to top, black, rgb(20,20,20) 3px, black 2px);}
+          100% {background: repeating-linear-gradient(to top, rgb(60,60,60), black 3px, black 2px);}
+      }
       div{
         margin-bottom: 10px;
 
@@ -110,7 +118,7 @@
     </style>
 
   </head>
-  <body>
+  <body class="bgblink">
     <header>
       <!-- <div class="container">
 

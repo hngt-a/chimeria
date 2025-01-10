@@ -65,12 +65,12 @@
     100% {opacity:1;}
 }
 .bgblink{
-  animation:bgblink 0.001s ease-in-out infinite alternate;
+  animation:bgblink 0.005s ease-in-out infinite alternate;
 
 }
 @keyframes bgblink{
     0% {background: repeating-linear-gradient(to top, black, rgb(40,20,20) 6px);}
-    100% {background: repeating-linear-gradient(to top, white, rgb(40,20,20) 6px);}
+    100% {background: repeating-linear-gradient(to top, rgb(40,20,20), black 6px);}
 }
 
 
@@ -137,7 +137,7 @@
     </style>
 
   </head>
-  <body>
+  <body class="bgblink">
     <header>
       <!-- <div class="container">
 

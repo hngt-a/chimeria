@@ -50,11 +50,19 @@
         font-family:'Yu Mincho', serif;
         color:white;
         background: repeating-linear-gradient(to top, rgb(100,120,120) 0px, rgb(255,255,255) 3px);
-        
+
       }
       div{
         margin-bottom: 10px;
 
+      }
+      .bgblink{
+        animation:bgblink 0.005s ease-in-out infinite alternate;
+
+      }
+      @keyframes bgblink{
+          0% {background: repeating-linear-gradient(to top, rgb(100,120,120) 0px, white 3px);}
+          100% {background: repeating-linear-gradient(to top, white 0px, rgb(80,90,90) 3px);}
       }
 
       img{
@@ -120,7 +128,7 @@
     </style>
 
   </head>
-  <body>
+  <body class="bgblink">
     <header>
       <!-- <div class="container">
 
@@ -135,7 +143,7 @@
     <div class="container">
 
       <div class="toplogo">
-        <a href="info.html">
+        <a href="decoration.html">
           <img class="logo" src="img/stillhuman_sketch1-toumei.png"/>
         </a>
 
