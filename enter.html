@@ -26,9 +26,9 @@
       gtag('config', 'UA-164120533-1');
     </script> -->
     <style>
-    @media screen and (min-width: 650px) {
+    @media screen and (min-width: 1000px) {
         .container {
-          max-width: 650px;
+          max-width: 1000px;
           margin: auto;
         }
       }
@@ -42,37 +42,28 @@
       }
       .toplogo img{
         /* border: solid red; */
-        width: 80%;
-        margin-left: 10%;
+        width: 100%;
       }
 
       body{
-        background:black;
+        background:white;
         font-family:'Yu Mincho', serif;
         color:white;
-        background: repeating-linear-gradient(to top, black, rgb(40,20,20) 6px);
+        /* background: repeating-linear-gradient(to top, rgb(100,120,120) 0px, rgb(255,255,255) 3px); */
+
       }
       div{
         margin-bottom: 10px;
 
       }
-      /* 点滅 */
-.blinking{
-    animation:blink 0.001s ease-in-out infinite alternate;
-}
-@keyframes blink{
-    0% {opacity:0;}
-    100% {opacity:1;}
-}
-.bgblink{
-  animation:bgblink 0.005s ease-in-out infinite alternate;
+      /* .bgblink{
+        animation:bgblink 0.005s ease-in-out infinite alternate;
 
-}
-@keyframes bgblink{
-    0% {background: repeating-linear-gradient(to top, black, rgb(40,20,20) 6px);}
-    100% {background: repeating-linear-gradient(to top, rgb(40,20,20), black 6px);}
-}
-
+      }
+      @keyframes bgblink{
+          0% {background: repeating-linear-gradient(to top, rgb(100,120,120) 0px, white 3px);}
+          100% {background: repeating-linear-gradient(to top, white 0px, rgb(80,90,90) 3px);}
+      } */
 
       img{
         width: 100%;
@@ -137,7 +128,7 @@
     </style>
 
   </head>
-  <body class="bgblink">
+  <body>
     <header>
       <!-- <div class="container">
 
@@ -151,9 +142,9 @@
     </header>
     <div class="container">
 
-      <div class="toplogo blinking shaking">
-        <a href="declaration.html">
-          <img class="logo" src="img/logo-w.png"/>
+      <div class="toplogo">
+        <a href="q1.html">
+          <img class="logo" src="img/stillhuman_sketch1-toumei.png"/>
         </a>
 
       </div>
