@@ -42,38 +42,23 @@
       }
       .toplogo img{
         /* border: solid red; */
-        width: 80%;
-        margin-left: 10%;
+        width: 100%;
       }
 
       body{
         background:black;
         font-family:'Yu Mincho', serif;
         color:white;
-        background: repeating-linear-gradient(to top, black, rgb(40,20,20) 6px);
+        background: repeating-linear-gradient(to top, rgb(100,120,120) 0px, rgb(255,255,255) 3px);
+        background:
+        linear-gradient(to right, rgb(30,10,10), transparent),
+        url(https://grainy-gradients.vercel.app/noise.svg);
+        filter: contrast(200%) brightness(100%);
       }
       div{
         margin-bottom: 10px;
 
       }
-      /* 点滅 */
-.blinking{
-	-webkit-animation:blink 0.001s ease-in-out infinite alternate;
-    -moz-animation:blink 0.001s ease-in-out infinite alternate;
-    animation:blink 0.001s ease-in-out infinite alternate;
-}
-@-webkit-keyframes blink{
-    0% {opacity:0;}
-    100% {opacity:1;}
-}
-@-moz-keyframes blink{
-    0% {opacity:0;}
-    100% {opacity:1;}
-}
-@keyframes blink{
-    0% {opacity:0;}
-    100% {opacity:1;}
-}
 
       img{
         width: 100%;
@@ -92,9 +77,9 @@
         background-color: rgb(0,0,0);
         border: 5px groove #666666;
         background:
-    linear-gradient(to right, rgb(30,10,10), transparent),
-    url(https://grainy-gradients.vercel.app/noise.svg);
-  filter: contrast(200%) brightness(80%);
+        linear-gradient(to right, rgb(30,20,10), transparent),
+        url(https://grainy-gradients.vercel.app/noise.svg);
+        filter: contrast(200%) brightness(80%);
 
       }
 
@@ -130,7 +115,8 @@
         font-size: 14px;
       }
       a{
-        color: rgb(0,255,0);
+        /* color: rgb(0,255,0); */
+        text-decoration:none;
       }
 
 
@@ -152,9 +138,41 @@
     </header>
     <div class="container">
 
-      <div class="toplogo blinking">
-        <a href="rebirth.html">
-          <img class="logo" src="img/logo-w.png"/>
+      <div class="toplogo">
+        <a href="info.html">
+          <div class="declaration">
+
+
+
+    <p>
+      CHIMERIAは以下の4者によって構築される。
+
+    </p>
+
+    <ol>
+      <li><b>キメラ/Chimera</b>：〈嵌合検査〉を通過し、嵌合装置を施され、身体を変容させる参加者。</li>
+      <li><b>ドク/Doc</b>：身体構造や感覚器官を変容させる〈嵌合装置〉を開発し、キメラに施す者。</li>
+      <li><b>ビルダ/Builder</b>：キメラのための生活環境として道具や空間を再構築する者。</li>
+      <li><b>ターミナル/Terminal</b>：キメラの身体感覚や生態を観察し、翻訳・記述する者。</li>
+    </ol>
+    <p>
+      この4者により、CHIMERIAでは次のことを行う。
+
+    </p>
+
+    <ol>
+      <li>あるルートから集められた参加者に対して〈嵌合検査〉を行い、CHIMERIAへの適合を判定する。</li>
+      <li>適合した参加者は〈ドク〉による〈嵌合装置〉を施され、〈キメラ〉となる。</li>
+      <li>キメラたちはCHIMERIAの中で実際に生活を営み、変異した自らの肉体そのものを試行錯誤し〈生まれ直す〉。</li>
+      <li>さらに、〈ビルダ〉とともに変異した彼らのための環境を新たに形作ることで、いわば〈キメラ中心主義〉ともいうべき状況をこの人間のための都市空間の中に再構築する。</li>
+      <li>そして、これらの過程は〈ターミナル〉によって記録され、翻訳される。</li>
+    </ol>
+    <p>
+      これにより、そこで生き始めた新たな可能態としての人間－キメラたちの自律領域としての《CHIMERIA》を構築し、全く新たな「人間性」の形を生成することを試みる。
+
+    </p>
+
+    </div>
         </a>
 
       </div>

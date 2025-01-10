@@ -42,38 +42,23 @@
       }
       .toplogo img{
         /* border: solid red; */
-        width: 80%;
-        margin-left: 10%;
+        width: 100%;
       }
 
       body{
         background:black;
         font-family:'Yu Mincho', serif;
         color:white;
-        background: repeating-linear-gradient(to top, black, rgb(40,20,20) 6px);
+        background: repeating-linear-gradient(to top, rgb(100,120,120) 0px, rgb(255,255,255) 3px);
+        background:
+        linear-gradient(to right, rgb(30,10,10), transparent),
+        url(https://grainy-gradients.vercel.app/noise.svg);
+        filter: contrast(200%) brightness(100%);
       }
       div{
         margin-bottom: 10px;
 
       }
-      /* 点滅 */
-.blinking{
-	-webkit-animation:blink 0.001s ease-in-out infinite alternate;
-    -moz-animation:blink 0.001s ease-in-out infinite alternate;
-    animation:blink 0.001s ease-in-out infinite alternate;
-}
-@-webkit-keyframes blink{
-    0% {opacity:0;}
-    100% {opacity:1;}
-}
-@-moz-keyframes blink{
-    0% {opacity:0;}
-    100% {opacity:1;}
-}
-@keyframes blink{
-    0% {opacity:0;}
-    100% {opacity:1;}
-}
 
       img{
         width: 100%;
@@ -92,9 +77,9 @@
         background-color: rgb(0,0,0);
         border: 5px groove #666666;
         background:
-    linear-gradient(to right, rgb(30,10,10), transparent),
-    url(https://grainy-gradients.vercel.app/noise.svg);
-  filter: contrast(200%) brightness(80%);
+        linear-gradient(to right, rgb(30,10,10), transparent),
+        url(https://grainy-gradients.vercel.app/noise.svg);
+        filter: contrast(200%) brightness(80%);
 
       }
 
@@ -130,7 +115,8 @@
         font-size: 14px;
       }
       a{
-        color: rgb(0,255,0);
+        /* color: rgb(0,255,0); */
+        text-decoration:none;
       }
 
 
@@ -152,9 +138,22 @@
     </header>
     <div class="container">
 
-      <div class="toplogo blinking">
-        <a href="rebirth.html">
-          <img class="logo" src="img/logo-w.png"/>
+      <div class="toplogo">
+        <a href="info.html">
+          <div class="declaration">
+
+
+            <h1 style="text-align:center;  font-size:20px; ">技術的嵌合宣言</h1>
+            <p >
+              ここに、テクノロジーによって身体の可塑性を発揮し、社会規範・生産性・人間性に基づく「正常な」社会から逃走する肉体たちのための「自律領域」：《技術的嵌合地帯 ーCHIMERIA》を構築する。 <br><br>
+
+              今日の社会において、資本主義とテクノロジーは相互作用的に「発展」し、あらゆるテクノロジーは生産を加速するために用いられる。そして、我々は新自由主義的なグローバル企業が実装するSNSアルゴリズムによって永遠にタップを繰り返すボットとなり、ギグワーキングシステムによって機械よりも安価なアクチュエータとなる。さらに、すでに人間の平均的な知能を超えたAIはこれまでの社会規範に基づいた「正常さ」を再生産し、強化する。このような「進歩的な」サービスは、我々にシステムのモジュールとしての生を与え、それ以外の可能性が想像できない閉塞した世界を形作る。<br><br>
+
+              しかし、本来テクノロジーは、生産を加速する目的だけではなく、身体感覚を変容させ、人間の〈可塑性〉を呼び起こすためにも使用することができる。つまり、生物学的進化を待たずして人間の肉体を別様態へと変異させることができるという可能性である。それこそがこの閉塞した世界を〈捻転〉させ、その外側へと躍り出るための亀裂となる。 <br><br>
+          </p>
+
+
+          </div>
         </a>
 
       </div>
