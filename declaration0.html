@@ -63,10 +63,16 @@
 
           }
       }
+      @font-face {
+        /* ① ここにfont-familyで指定したい名前を書く*/
+        font-family: "bugfont";
 
+        /* フォントが置かれているパスを書く */
+        src: url("/font/BugMaruGothic-16.regular.ttf") format("truetype");
+      }
       body{
         background:black;
-        font-family:'Yu Mincho', serif;
+        font-family:"bugfont",'Yu Mincho', serif;
         color:white;
         background: repeating-linear-gradient(to top, rgb(100,120,120) 0px, rgb(255,255,255) 3px);
         background:
