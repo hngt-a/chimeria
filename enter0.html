@@ -58,19 +58,19 @@
       }
       /* 点滅 */
 .blinking{
-    animation:blink 0.001s ease-in-out infinite alternate;
+    animation:blink 10s ease-in-out infinite alternate;
 }
 @keyframes blink{
-    0% {opacity:0;}
+    0% {opacity:0.1;}
     100% {opacity:1;}
 }
 .bgblink{
-  animation:bgblink 0.005s ease-in-out infinite alternate;
+  animation:bgblink 0.05s ease-in-out infinite alternate;
 
 }
 @keyframes bgblink{
-    0% {background: repeating-linear-gradient(to top, black, rgb(40,20,20) 6px);}
-    100% {background: repeating-linear-gradient(to top, rgb(40,20,20), black 6px);}
+    0% {background: repeating-linear-gradient(to top, black, rgb(0,30,0) 10px);}
+    100% {background: repeating-linear-gradient(to top, rgb(0,30,0), black 6px);}
 }
 
 
@@ -151,10 +151,11 @@
     </header>
     <div class="container">
 
-      <div class="toplogo blinking shaking">
-        <a href="q1.html">
+      <div class="toplogo blinking">
+        <a href="declaration.html">
           <img class="logo" src="img/logo-w.png"/>
         </a>
+
 
       </div>
 
