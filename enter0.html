@@ -50,7 +50,8 @@
         background:black;
         font-family:'Yu Mincho', serif;
         color:white;
-        background: repeating-linear-gradient(to top, black, rgb(40,20,20) 6px);
+        background: repeating-linear-gradient(to right, silver,orange,brown,black,silver 3000px);
+        background-size: 3000px 100%;
       }
       div{
         margin-bottom: 10px;
@@ -61,16 +62,21 @@
     animation:blink 10s ease-in-out infinite alternate;
 }
 @keyframes blink{
-    0% {opacity:0.1;}
+    0% {opacity:0;}
     100% {opacity:1;}
 }
 .bgblink{
-  animation:bgblink 0.05s ease-in-out infinite alternate;
+  animation:bgblink 180s ease-in-out infinite alternate;
 
 }
 @keyframes bgblink{
-    0% {background: repeating-linear-gradient(to top, black, rgb(0,30,0) 10px);}
-    100% {background: repeating-linear-gradient(to top, rgb(0,30,0), black 6px);}
+
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 0%;}
+  100%{background-position:300% 0%;}
+  /* 0%{background-: 1000%;}
+  50%{background-size: 300%;}
+  100%{background-size: 3%;} */
 }
 
 
