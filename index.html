@@ -42,16 +42,17 @@
       }
       .toplogo img{
         /* border: solid red; */
-        width: 80%;
-        margin-left: 10%;
+        width: 50%;
+        margin-left: 25%;
       }
 
       body{
         background:black;
         font-family:'Yu Mincho', serif;
         color:white;
-        background: repeating-linear-gradient(to top, black, rgb(40,20,20) 6px);
-      }
+        /* background: repeating-linear-gradient(to top, black, rgb(40,20,20) 6px); */
+        /* background-image: url("img/-3"); */
+        }
       div{
         margin-bottom: 10px;
 
@@ -65,12 +66,21 @@
     100% {opacity:1;}
 }
 .bgblink{
-  animation:bgblink 0.005s ease-in-out infinite alternate;
+  animation:bgblink 0.1s ease-in-out infinite alternate;
 
 }
 @keyframes bgblink{
-    0% {background: repeating-linear-gradient(to top, black, rgb(40,20,20) 6px);}
-    100% {background: repeating-linear-gradient(to top, rgb(40,20,20), black 6px);}
+    0% {background: repeating-linear-gradient(to top, black, rgb(0,0,160) 12px);}
+    20% {background: repeating-linear-gradient(to top, black, rgb(0,0,160) 3px);}
+    40% {background: repeating-linear-gradient(to top, black, rgb(0,0,160) 9px);}
+    80% {background: repeating-linear-gradient(to top, rgb(0,0,160), black 5px);}
+    100% {background: repeating-linear-gradient(to top, rgb(0,0,160), black 10px);}
+
+    0% {background: repeating-linear-gradient(to top, black, red 12px);}
+    20% {background: repeating-linear-gradient(to top, black, red 3px);}
+    40% {background: repeating-linear-gradient(to top, black, red 9px);}
+    80% {background: repeating-linear-gradient(to top, red, black 5px);}
+    100% {background: repeating-linear-gradient(to top, red, black 10px);}
 }
 
 
@@ -151,9 +161,9 @@
     </header>
     <div class="container">
 
-      <div class="toplogo blinking shaking">
+      <div class="toplogo">
         <a href="q1.html">
-          <img class="logo" src="img/logo-w.png"/>
+          <img class="logo" src="img/top-1.png"/>
         </a>
 
       </div>
