@@ -57,12 +57,13 @@
 
       }
       .bgblink{
-        animation:bgblink 0.005s ease-in-out infinite alternate;
+        animation:bgblink 0.05s ease-in-out infinite alternate;
 
       }
       @keyframes bgblink{
-          0% {background: repeating-linear-gradient(to top, rgb(220,220,220) 0px, rgb(255,255,255) 4px);}
-          100% {background: repeating-linear-gradient(to top, rgb(255,255,255) 0px, rgb(220,220,220) 4px);}
+          0% {background: repeating-linear-gradient(to top, rgb(220,220,220), rgb(255,255,255) 4px);}
+          30% {background: repeating-linear-gradient(to top, rgb(220,220,220), rgb(255,255,255) 3px);}
+          100% {background: repeating-linear-gradient(to top, rgb(255,255,255), rgb(220,220,220) 8px);}
       }
 
       img{

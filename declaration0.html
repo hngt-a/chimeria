@@ -74,12 +74,20 @@
         background:black;
         font-family: "hibiya",serif;
         color:white;
-        background: repeating-linear-gradient(to top, rgb(100,120,120) 0px, rgb(255,255,255) 3px);
-        background:
-        linear-gradient(to left, rgb(30,100,100), rgb(30,0,0)),
-        url(https://grainy-gradients.vercel.app/noise.svg);
-        filter: contrast(100%) brightness(100%);
+        background: repeating-linear-gradient(to top, rgb(80,120,120), rgb(20,20,20), rgb(80,120,120) 3000px);
+        background-size: 100vw 3000px;
       }
+
+      .bgbgradation{
+  animation:bgbgradation 60s ease-in-out infinite alternate;
+
+}
+@keyframes bgbgradation{
+
+  0%{background-position:0% 0%;}
+  50%{background-position:0% 100%;}
+  100%{background-position:0% 200%;}
+}
       div{
         margin-bottom: 10px;
       }
@@ -156,7 +164,7 @@
     </style>
 
   </head>
-  <body>
+  <body class="bgbgradation">
     <header>
       <!-- <div class="container">
 

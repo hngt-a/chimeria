@@ -56,8 +56,19 @@
         background:black;
         font-family:"hibiya",'Yu Mincho', serif;
         color:white;
-        background:linear-gradient(to right, rgb(120,0,0), black);
+        background:linear-gradient(to left, rgb(120,0,0), rgb(90,90,90),rgb(120,0,0)  2000px);
+        background-size: 2000px;
       }
+      .bggradation{
+  animation:bggradation 60s ease-in-out infinite alternate;
+
+}
+@keyframes bggradation{
+
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 0%;}
+  100%{background-position:300% 0%;}
+}
 
       .bgblink{
         animation:bgblink 30s ease-in-out infinite alternate;
@@ -150,7 +161,7 @@
     </style>
 
   </head>
-  <body class="bgblink2">
+  <body class="bggradation">
     <header>
       <!-- <div class="container">
 
