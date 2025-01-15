@@ -43,8 +43,16 @@
         background:black;
         font-family:"hibiya",'Yu Mincho', serif;
         color:white;
-        background: url("img/white-chimeria-bg.gif");
+        background: linear-gradient(to bottom, white, transparent, transparent, black), url("img/white-chimeria-bg.gif");
 
+      }
+      .blink{
+        animation:blink 0.001s ease-in-out infinite alternate;
+      }
+      @keyframes blink {
+        0%{opacity: 0%;}
+        25%{opacity: 50%;}
+        100%{opacity: 100%;}
       }
       .bgblink{
         animation:bgblink 5s ease-in-out infinite alternate;
@@ -85,15 +93,15 @@
       }
 
       .text{
-        width: 95%;
+        width: 100%-4px;
         padding: 10px;
         margin: auto;
         margin-bottom: 10px;
 
         color: white;
-        border: 7px groove #666666;
+        border: 4px groove #666666;
         background:
-    linear-gradient(to right, rgb(0,0,0), transparent);
+    linear-gradient(to right, rgb(0,0,0), rgba(0,0,0,0.4));
     /* url(https://grainy-gradients.vercel.app/noise.svg);
   filter: contrast(200%) brightness(80%); */
 
@@ -151,8 +159,8 @@
     <div class="container">
 
 
-    <div  style="text-align:center;">
-      <img style=" width:60%;"src="img/logo-w.png"/>
+    <div class="blink" style="text-align:center;">
+      <img style=" width:65%;"src="img/logo-bk.png"/>
 
     </div>
       <!-- <div class="declaration">
