@@ -93,6 +93,15 @@ button:active{border-style:inset;}
   padding:2px 0;vertical-align:top;}
 .perf td:first-child{white-space:nowrap;padding-right:10px;color:#fff;}
 
+.whatis{text-align:center;margin:4px 0 0;}
+.whatis a{
+  color:#00ff00;
+  font-size:12px;
+  letter-spacing:0.05em;
+  text-decoration:none;
+  border-bottom:1px solid rgba(0,255,0,0.45);
+  text-shadow:0 1px 6px rgba(0,0,0,0.95), 0 0 2px rgba(0,0,0,0.9);
+}
 .more{font-size:12.5px;line-height:1.75;color:rgb(205,205,205);margin-top:12px;}
 .links{margin-top:30px;}
 .links a{
