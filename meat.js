@@ -31,10 +31,8 @@
     '  uv2 += w*0.008;' +
     '  uv2 = clamp(uv2, 0.001, 0.999);' +
     '  vec3 c = texture2D(tex, uv2).rgb;' +
-    // crush to a deep blood-red field so white type always reads
-    '  c = pow(c, vec3(1.9));' +
-    '  c *= vec3(0.70, 0.23, 0.20);' +
-    '  c *= 0.86 + 0.14*sin(t*0.6 + uv.y*2.5);' +
+    // 肉はそのまま。うねりだけ。ごく薄い明滅で生かす
+    '  c *= 0.96 + 0.04*sin(t*0.6 + uv.y*2.5);' +
     '  gl_FragColor = vec4(c,1.0);' +
     '}';
 

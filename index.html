@@ -20,16 +20,11 @@
 
 <body>
 <canvas id="bg"></canvas>
-<div id="veil"></div>
 
 <div class="container"><div class="wrap">
 
   <div class="logo-wrap">
     <img src="img/figure-web.png" alt="CHIMERIA">
-  </div>
-
-  <div class="box manifest">
-    <div class="l">TWIST THIS BODY<br>DEMOTE THIS REALITY</div>
   </div>
 
   <p class="dedication">
@@ -38,16 +33,11 @@
   </p>
 
   <div class="box">
-    <p>CHIMERIA rewires the body with technology &mdash; not to work faster,
-       but to be born again as something this world was not built for.</p>
-
-    <div id="askbox">
-      <p class="ask">Do you want to see this, or to be it?</p>
-      <p class="ja">見るのか、なるのか。</p>
-    </div>
 
     <form id="f" method="post" target="sink"
           action="https://script.google.com/macros/s/AKfycbyuYkowe6Fh24iZ6TuPUjS3g7fU74__CU9UkjFfzTLym5Yf4Rk-D9L8sYkOOMOOHrj8/exec">
+      <p class="ask">Do you want to witness it or to be twisted?</p>
+
       <input type="hidden" name="source" value="ars2026">
       <input type="hidden" name="lang" id="f_lang" value="en">
 
@@ -56,39 +46,30 @@
 
       <label class="opt">
         <input type="checkbox" name="general" value="yes" checked>
-        Also send me Shin Hanagata's other work (exhibitions, performances).
+        Also send me Shin Hanagata's other work.
       </label>
 
       <div class="row">
-        <button type="submit" name="side" value="watch">WATCH</button>
-        <button type="submit" name="side" value="twist">TWIST</button>
-      </div>
-      <div class="btnnote">
-        <span>records &amp; updates</span>
-        <span>recipes &amp; next sessions</span>
-      </div>
-
-      <div class="note">
-        One click to leave, anytime. No tracking.<br>
-        Shin Hanagata / CHIMERIA &mdash; Award of Distinction, Prix Ars Electronica 2026.
+        <button type="submit" name="side" value="watch">WITNESS</button>
+        <button type="submit" name="side" value="twist">BE TWISTED</button>
       </div>
     </form>
 
     <div id="done" hidden>
       <p class="hit">RECEIVED.</p>
-      <p>One mail is on its way. The first instruction is inside it.<br>
-         If it is not there in a minute, look in the spam folder.</p>
-      <p class="ja">メールを1通送りました。最初の指示はその中にあります。</p>
+      <p>One mail is on its way. The first instruction is inside it.</p>
 
       <div class="sched">
-        <p class="hit">WHERE THE BODY IS</p>
-        <p><b>Lentos Kunstmuseum Linz</b><br>
-           Open 10:00&ndash;18:00, Thursday until 20:00</p>
-        <p><b>Live performance</b><br>
-           Wed 9 &ndash; Fri 11 Sep<br>13:00&ndash;15:00 / 16:00&ndash;18:00<br>
-           Sat 12 &ndash; Sun 13 Sep<br>10:00&ndash;12:00 / 13:00&ndash;15:00 / 16:00&ndash;18:00</p>
-        <p class="ja">レントス美術館 10:00–18:00（木曜のみ20:00まで）。
-           パフォーマンスは水〜金 13-15/16-18、土日 10-12/13-15/16-18。</p>
+        <p><b>Lentos Kunstmuseum Linz</b> &nbsp; 10:00&ndash;18:00, Thu until 20:00</p>
+        <p><b>Live</b><br>
+           Wed 9 &ndash; Fri 11 Sep &nbsp; 13&ndash;15 / 16&ndash;18<br>
+           Sat 12 &ndash; Sun 13 Sep &nbsp; 10&ndash;12 / 13&ndash;15 / 16&ndash;18</p>
+        <nav class="links">
+          <a href="https://ars.electronica.art/negotiatinghumanity/en/view/chimeria-39438ddb450c81c08484f792653c9a49/" target="_blank" rel="noopener">Ars Electronica</a>
+          <a href="https://www.shinhanagata.com/" target="_blank" rel="noopener">shinhanagata.com</a>
+          <a href="https://www.instagram.com/_chimeria_/" target="_blank" rel="noopener">@_chimeria_</a>
+          <a href="https://www.instagram.com/shin.hanagata/" target="_blank" rel="noopener">@shin.hanagata</a>
+        </nav>
       </div>
     </div>
 
@@ -96,24 +77,16 @@
       <p class="hit">Could not reach the server.</p>
       <p>Write to <a href="mailto:hngt.a@icloud.com">hngt.a@icloud.com</a> and you are in.</p>
     </div>
+
   </div>
 
 </div></div>
 
 <iframe name="sink" id="sink" style="display:none" title="submit target"></iframe>
 
-<footer>
-  <nav class="links">
-    <a href="https://ars.electronica.art/negotiatinghumanity/en/view/chimeria-39438ddb450c81c08484f792653c9a49/" target="_blank" rel="noopener">Ars Electronica</a>
-    <a href="https://www.shinhanagata.com/" target="_blank" rel="noopener">shinhanagata.com</a>
-    <a href="https://www.instagram.com/_chimeria_/" target="_blank" rel="noopener">@_chimeria_</a>
-    <a href="https://www.instagram.com/shin.hanagata/" target="_blank" rel="noopener">@shin.hanagata</a>
-  </nav>
-  <div>©︎2026 CHIMERIA</div>
-</footer>
+<footer>©︎2026 CHIMERIA</footer>
 
 <script>
-// language from the device (zero taps) + submit handling
 (function(){
   var l = (navigator.language || 'en').toLowerCase();
   document.getElementById('f_lang').value = l.indexOf('ja') === 0 ? 'ja' : 'en';
@@ -122,7 +95,6 @@
       sink = document.getElementById('sink'),
       done = document.getElementById('done'),
       failed = document.getElementById('failed'),
-      askbox = document.getElementById('askbox'),
       sent = false, timer = null;
 
   function finish(ok){
@@ -130,7 +102,6 @@
     sent = false;
     clearTimeout(timer);
     f.hidden = true;
-    if(askbox) askbox.hidden = true;
     (ok ? done : failed).hidden = false;
   }
 
@@ -144,7 +115,7 @@
   sink.addEventListener('load', function(){ finish(true); });
 })();
 
-// CHIMERAS / HUMANS — swapped every frame
+// CHIMERAS / HUMANS — swapped every 5 frames
 (function(){
   var a = document.getElementById('w_a'),
       b = document.getElementById('w_b');
@@ -157,11 +128,14 @@
     a.insertAdjacentText('afterend', ' / ');
     return;
   }
-  var on = false;
+  var n = 0, on = false;
   (function tick(){
-    on = !on;
-    a.style.visibility = on ? 'hidden' : 'visible';
-    b.style.visibility = on ? 'visible' : 'hidden';
+    if(++n >= 5){
+      n = 0;
+      on = !on;
+      a.style.visibility = on ? 'hidden' : 'visible';
+      b.style.visibility = on ? 'visible' : 'hidden';
+    }
     requestAnimationFrame(tick);
   })();
 })();

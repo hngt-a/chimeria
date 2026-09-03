@@ -8,33 +8,29 @@ body{
   font-size:14px;
   min-height:100vh;
 }
-#bg{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-2;display:block;}
-/* 肉の上に薄い暗幕。文字を読ませるためだけ */
-#veil{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;pointer-events:none;
-  background:radial-gradient(ellipse at 50% 35%,
-    rgba(0,0,0,0.30) 0%, rgba(0,0,0,0.62) 70%, rgba(0,0,0,0.84) 100%);}
+#bg{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;display:block;}
 
 .container{width:100%;max-width:620px;margin:0 auto;padding:0 14px;}
-.wrap{padding:6vh 0 5vh;}
-.logo-wrap{text-align:center;margin-bottom:18px;}
-.logo-wrap img{width:58%;max-width:300px;height:auto;}
+.wrap{padding:9vh 0 6vh;}
+.logo-wrap{text-align:center;margin-bottom:22px;}
+.logo-wrap img{width:62%;max-width:320px;height:auto;}
 
 .box{
   width:100%;
   margin:0 0 14px;
-  padding:15px 13px;
+  padding:20px 16px;
   border:5px groove #666;
   background:rgba(6,2,2,0.82);
 }
-.manifest{text-align:center;color:rgb(255,26,26);}
-.manifest .l{font-size:19px;letter-spacing:0.08em;line-height:1.9;}
 
 .dedication{
   text-align:center;
-  font-size:13px;
-  letter-spacing:0.14em;
-  color:rgb(215,215,215);
-  margin:0 0 16px;
+  font-size:14px;
+  letter-spacing:0.16em;
+  color:#fff;
+  margin:0 0 14px;
+  padding:9px 8px;
+  background:rgba(0,0,0,0.55);
 }
 .sw{position:relative;display:inline-block;}
 .sw b{font-weight:inherit;}
@@ -43,8 +39,7 @@ body{
 
 .box p{font-size:14px;line-height:1.7;margin:0 0 10px;}
 .box p:last-child{margin-bottom:0;}
-.ja{color:rgb(180,180,180);font-size:12.5px;}
-.ask{font-size:16px;line-height:1.6;color:#fff;margin-top:16px;margin-bottom:4px;}
+.ask{font-size:17px;line-height:1.6;color:#fff;margin:0 0 16px;text-align:center;}
 .hit{color:rgb(255,26,26);letter-spacing:0.06em;}
 
 form{margin:14px 0 0;}
@@ -60,15 +55,12 @@ input[type=email]{
 .row{display:flex;gap:9px;}
 button{
   flex:1 1 0;min-width:0;
-  padding:13px 6px;
-  font-family:inherit;font-size:15px;letter-spacing:0.06em;
+  padding:14px 4px;
+  font-family:inherit;font-size:14.5px;letter-spacing:0.05em;
   color:#000;background:gray;
   border:3px outset #999;cursor:pointer;
 }
 button:active{border-style:inset;}
-.btnnote{display:flex;gap:9px;margin-top:6px;}
-.btnnote span{flex:1 1 0;min-width:0;font-size:10.5px;color:rgb(150,150,150);text-align:center;line-height:1.45;}
-.note{font-size:10.5px;color:rgb(140,140,140);margin-top:14px;line-height:1.6;}
 
 #done p, #failed p{font-size:14px;line-height:1.75;margin:0 0 10px;}
 #done p:last-child, #failed p:last-child{margin-bottom:0;}
@@ -79,13 +71,11 @@ a{color:rgb(0,255,0);}
 footer{text-align:center;color:rgb(85,85,85);font-size:11px;padding:26px 14px 22px;}
 
 @media (max-width:360px){
-  .manifest .l{font-size:16px;}
-  .box p{font-size:13px;}
-  .ask{font-size:15px;}
+    .ask{font-size:15px;}
   .dedication{font-size:12px;letter-spacing:0.1em;}
 }
 
-.links{margin-bottom:10px;line-height:2;}
+.links{margin-top:14px;line-height:2.1;text-align:center;}
 .links a{
   color:rgb(150,150,150);
   text-decoration:none;
@@ -96,3 +86,6 @@ footer{text-align:center;color:rgb(85,85,85);font-size:11px;padding:26px 14px 22
   white-space:nowrap;
 }
 .links a:hover{color:rgb(0,255,0);border-bottom-color:rgb(0,255,0);}
+
+.sched{margin-top:16px;padding-top:14px;border-top:1px solid #4a3030;}
+.sched p{font-size:12.5px;line-height:1.75;color:rgb(205,205,205);}
