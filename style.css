@@ -93,17 +93,17 @@ button:active{border-style:inset;}
   padding:2px 0;vertical-align:top;}
 .perf td:first-child{white-space:nowrap;padding-right:10px;color:#fff;}
 
-.links{margin-top:14px;line-height:2.1;text-align:center;}
+.more{font-size:12.5px;line-height:1.75;color:rgb(205,205,205);margin-top:12px;}
+.links{margin-top:30px;}
 .links a{
-  color:rgb(150,150,150);
+  display:block;
+  color:#00ff00;
   text-decoration:none;
-  border-bottom:1px solid rgb(70,70,70);
   font-size:11px;
   letter-spacing:0.04em;
-  margin:0 7px;
-  white-space:nowrap;
+  line-height:1.95;
 }
-.links a:hover{color:rgb(0,255,0);border-bottom-color:rgb(0,255,0);}
+.links a:hover{text-decoration:underline;}
 
 a{color:rgb(0,255,0);}
 footer{text-align:center;color:rgb(85,85,85);font-size:11px;padding:26px 14px 22px;}
