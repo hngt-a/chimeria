@@ -19,12 +19,6 @@
 </head>
 
 <body>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
-  <filter id="jag" x="-5%" y="-5%" width="110%" height="110%" color-interpolation-filters="sRGB">
-    <feComponentTransfer><feFuncA type="discrete" tableValues="0 1"/></feComponentTransfer>
-  </filter>
-</defs></svg>
-
 <canvas id="bg"></canvas>
 
 <div class="container"><div class="wrap">
@@ -33,14 +27,13 @@
     <img src="img/figure-web.png" alt="CHIMERIA">
   </div>
 
-  <p class="dedication"><span class="stretch">DEDICATED&nbsp;TO&nbsp;ALL
-    <span class="sw"><b id="w_a">CHIMERAS</b><b id="w_b">HUMANS</b></span></span></p>
+  <div id="dedication" class="dedication">DEDICATED TO ALL CHIMERAS</div>
 
   <div class="box">
 
     <form id="f" method="post" target="sink"
           action="https://script.google.com/macros/s/AKfycbyuYkowe6Fh24iZ6TuPUjS3g7fU74__CU9UkjFfzTLym5Yf4Rk-D9L8sYkOOMOOHrj8/exec">
-      <p class="ask">Do you want to witness it or to be twisted?</p>
+      <div id="ask" class="ask" data-text="Do you want to witness it or to be twisted?">DO YOU WANT TO WITNESS IT OR TO BE TWISTED?</div>
 
       <input type="hidden" name="source" value="ars2026">
       <input type="hidden" name="lang" id="f_lang" value="en">
@@ -64,10 +57,22 @@
       <p>One mail is on its way. The first instruction is inside it.</p>
 
       <div class="sched">
-        <p><b>Lentos Kunstmuseum Linz</b> &nbsp; 10:00&ndash;18:00, Thu until 20:00</p>
-        <p><b>Live</b><br>
-           Wed 9 &ndash; Fri 11 Sep &nbsp; 13&ndash;15 / 16&ndash;18<br>
-           Sat 12 &ndash; Sun 13 Sep &nbsp; 10&ndash;12 / 13&ndash;15 / 16&ndash;18</p>
+        <p class="sh">Ars Electronica Festival 2026<br>
+           CHIMERIA at Lentos Kunstmuseum Linz</p>
+
+        <p><b>Installation</b><br>
+           9&ndash;13 Sep &nbsp; 10:00&ndash;18:00<br>
+           <span class="dim">(THU, 10 Sep 10:00&ndash;20:00)</span></p>
+
+        <p><b>Durational Performance</b></p>
+        <table class="perf">
+          <tr><td>WED, 9 Sep</td><td>13:00&ndash;15:00 / 16:00&ndash;18:00</td></tr>
+          <tr><td>THU, 10 Sep</td><td>15:00&ndash;17:00</td></tr>
+          <tr><td>FRI, 11 Sep</td><td>13:00&ndash;15:00 / 16:00&ndash;18:00</td></tr>
+          <tr><td>SAT, 12 Sep</td><td>10:00&ndash;12:00 / 13:00&ndash;15:00 / 16:00&ndash;18:00</td></tr>
+          <tr><td>SUN, 13 Sep</td><td>10:00&ndash;12:00 / 13:00&ndash;15:00 / 16:00&ndash;18:00</td></tr>
+        </table>
+
         <nav class="links">
           <a href="https://ars.electronica.art/negotiatinghumanity/en/view/chimeria-39438ddb450c81c08484f792653c9a49/" target="_blank" rel="noopener">Ars Electronica</a>
           <a href="https://www.shinhanagata.com/" target="_blank" rel="noopener">shinhanagata.com</a>
@@ -119,31 +124,8 @@
   sink.addEventListener('load', function(){ finish(true); });
 })();
 
-// CHIMERAS / HUMANS — swapped every 5 frames
-(function(){
-  var a = document.getElementById('w_a'),
-      b = document.getElementById('w_b');
-  if(!a || !b) return;
-
-  var still = window.matchMedia &&
-              window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if(still){
-    b.className = 'static';
-    a.insertAdjacentText('afterend', ' / ');
-    return;
-  }
-  var n = 0, on = false;
-  (function tick(){
-    if(++n >= 2){
-      n = 0;
-      on = !on;
-      a.style.visibility = on ? 'hidden' : 'visible';
-      b.style.visibility = on ? 'visible' : 'hidden';
-    }
-    requestAnimationFrame(tick);
-  })();
-})();
 </script>
 <script src="meat.js"></script>
+<script src="jag.js"></script>
 </body>
 </html>

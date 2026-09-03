@@ -12,8 +12,8 @@ body{
 
 .container{width:100%;max-width:620px;margin:0 auto;padding:0 14px;}
 .wrap{padding:9vh 0 6vh;}
-.logo-wrap{text-align:center;margin-bottom:10px;}
-.logo-wrap img{width:92%;max-width:480px;height:auto;}
+.logo-wrap{text-align:center;margin-bottom:6px;}
+.logo-wrap img{width:74%;max-width:390px;height:auto;}
 
 .box{
   width:100%;
@@ -23,32 +23,12 @@ body{
   background:rgba(6,2,2,0.82);
 }
 
-.dedication{
-  text-align:center;
-  margin:2px 0 20px;
-  line-height:1;
-}
-.stretch{
-  display:inline-block;
-  transform:scaleY(1.75);
-  transform-origin:center;
-  margin:14px 0;
-  font-size:21px;
-  letter-spacing:-0.045em;
-  color:#00ff00;
-  white-space:nowrap;
-  filter:url(#jag);
-}
-.sw{position:relative;display:inline-block;}
-.sw b{font-weight:inherit;}
-#w_b{position:absolute;left:0;top:0;width:100%;text-align:center;visibility:hidden;}
-#w_b.static{position:static;width:auto;visibility:visible;}
+.dedication{text-align:center;margin:4px 0 18px;line-height:0;}
 
 .box p{font-size:14px;line-height:1.7;margin:0 0 10px;}
 .box p:last-child{margin-bottom:0;}
-.ask{font-size:17px;line-height:1.55;color:#fff;margin:0 0 14px;text-align:center;
-  filter:url(#jag);}
-.hit{color:rgb(255,26,26);letter-spacing:0.06em;filter:url(#jag);}
+.ask{text-align:center;margin:0 0 14px;line-height:0;}
+.hit{color:rgb(255,26,26);letter-spacing:0.06em;}
 
 form{margin:14px 0 0;}
 input[type=email]{
@@ -67,7 +47,7 @@ button{
   font-family:inherit;font-size:14.5px;letter-spacing:0.05em;
   color:#000;background:gray;
   border:3px outset #999;cursor:pointer;
-  filter:url(#jag);
+  
 }
 button:active{border-style:inset;}
 
@@ -80,8 +60,7 @@ a{color:rgb(0,255,0);}
 footer{text-align:center;color:rgb(85,85,85);font-size:11px;padding:26px 14px 22px;}
 
 @media (max-width:360px){
-    .ask{font-size:15px;}
-  .stretch{font-size:17px;}
+    .ask{text-align:center;margin:0 0 14px;line-height:0;}
   .dedication{font-size:12px;letter-spacing:0.1em;}
 }
 
@@ -99,3 +78,11 @@ footer{text-align:center;color:rgb(85,85,85);font-size:11px;padding:26px 14px 22
 
 .sched{margin-top:16px;padding-top:14px;border-top:1px solid #4a3030;}
 .sched p{font-size:12.5px;line-height:1.75;color:rgb(205,205,205);}
+
+.jagcv{display:block;margin:0 auto;}
+.sh{color:#00ff00;letter-spacing:0.04em;}
+.dim{color:rgb(160,160,160);}
+.perf{width:100%;border-collapse:collapse;margin:4px 0 2px;}
+.perf td{font-size:12px;line-height:1.6;color:rgb(210,210,210);
+  padding:2px 0;vertical-align:top;}
+.perf td:first-child{white-space:nowrap;padding-right:10px;color:#fff;}
