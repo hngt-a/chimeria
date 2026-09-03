@@ -1,211 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head prefix="og: http://ogp.me/ns#">
-    <meta property="og:url" content="https://xsrnvirz.org/">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="CHIMERIA">
-    <meta property="og:image" content="https://xsrnvirz.org/img/ogp.jpg">
-    <meta property="og:description" content="TECHNOENGRAFTINGZONE">
-    <meta name="twitter:card" content="summary_large_image"/>
+  <meta property="og:url" content="https://xsrnvirz.org/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CHIMERIA">
+  <meta property="og:image" content="https://xsrnvirz.org/img/ogp.jpg">
+  <meta property="og:description" content="TWIST THIS BODY / DEMOTE THIS REALITY">
+  <meta name="twitter:card" content="summary_large_image"/>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CHIMERIA</title>
-    <!-- <link rel="stylesheet" href="stylesheet.min.css">
-    <link rel="stylesheet" href="responsive.min.css">
-    <link rel="stylesheet" href="font.min.css"> -->
-    <!-- <link rel="stylesheet" href="base-design.min.css"> -->
-    <!-- <script src="https://kit.fontawesome.com/0a6ebbdf88.js" crossorigin="anonymous"></script> -->
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164120533-1"></script> -->
-    <!-- <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHIMERIA</title>
+<link rel="stylesheet" href="style.css">
+</head>
 
-      gtag('config', 'UA-164120533-1');
-    </script> -->
-    <style>
-    @media screen and (min-width: 650px) {
-        .container {
-          max-width: 650px;
-          margin: auto;
-        }
-      }
-      .toplogo{
-        width: 100%;
-        height: 98vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        /* border: solid red; */
-      }
-      .toplogo img{
-        /* border: solid red; */
-        width: 60%;
-        margin-left: 20%;
-      }
+<body>
+<canvas id="bg"></canvas>
+<div id="veil"></div>
+<div id="crt"></div>
 
-      body{
-        background:black;
-        font-family:'Yu Mincho', serif;
-        color:white;
-        /* background: repeating-linear-gradient(to top, black, rgb(40,20,20) 6px); */
-        /* background-image: url("img/-3"); */
-        }
-      div{
-        margin-bottom: 10px;
+<div class="container"><div class="wrap">
 
-      }
-      /* 点滅 */
-.blinking{
-    animation:blink 0.001s ease-in-out infinite alternate;
-}
-@keyframes blink{
-    0% {opacity:0;}
-    100% {opacity:1;}
-}
-.bgblink{
-  animation:bgblink 0.001s ease-in-out infinite alternate;
+  <div class="logo-wrap">
+    <img src="img/figure-web.png" alt="CHIMERIA">
+  </div>
 
-}
-@keyframes bgblink{
-    /* 0% {background: repeating-linear-gradient(to top, black, rgb(0,0,160) 12px);}
-    20% {background: repeating-linear-gradient(to top, black, rgb(0,0,160) 3px);}
-    40% {background: repeating-linear-gradient(to top, black, rgb(0,0,160) 9px);}
-    80% {background: repeating-linear-gradient(to top, rgb(0,0,160), black 5px);}
-    100% {background: repeating-linear-gradient(to top, rgb(0,0,160), black 10px);} */
+  <div class="box manifest">
+    <div class="l">TWIST THIS BODY<br>DEMOTE THIS REALITY</div>
+  </div>
 
-    0% {background: repeating-linear-gradient(to top, white,rgb(52,234,43) 12px);}
-    20% {background: repeating-linear-gradient(to top, white,rgb(52,234,43) 3px);}
-    40% {background: repeating-linear-gradient(to top, white,rgb(234,52,43) 9px);}
-    80% {background: repeating-linear-gradient(to top, white,rgb(52,234,43) 5px);}
-    100% {background: repeating-linear-gradient(to top, white,rgb(234,52,43) 10px);}
-}
+  <div class="box">
+    <p>CHIMERIA rewires the body with technology — not to work faster, but to be born again as something this world was not built for.</p>
+    <p>Leave your address. You get the recipes: how the devices are built, how the practice is done, where it happens next.</p>
+    <p class="ja">〈捻転〉の実践のレシピを送ります。装置の作り方、実践の記録、次にどこで起こるか。</p>
 
+    <form id="f" method="post" target="sink"
+          action="https://script.google.com/macros/s/AKfycbyuYkowe6Fh24iZ6TuPUjS3g7fU74__CU9UkjFfzTLym5Yf4Rk-D9L8sYkOOMOOHrj8/exec">
+      <input type="hidden" name="source" value="ars2026">
+      <input type="hidden" name="lang" id="f_lang" value="en">
 
-      img{
-        width: 100%;
-      }
-      /* .logo{
-        width: 70%;
-        margin-left:15%;
-      } */
-      .declaration{
-        width: 90%;
-        margin: auto;
-        padding: 10px;
-        color:rgb(255,0,0);
-        /* border: 5px solid;
-        border-image: radial-gradient(#808080, #ffffff) 49%; */
-        background-color: rgb(0,0,0);
-        border: 5px groove #666666;
-        background:
-    linear-gradient(to right, rgb(30,10,10), transparent),
-    url(https://grainy-gradients.vercel.app/noise.svg);
-  filter: contrast(200%) brightness(80%);
+      <input type="email" name="email" id="f_email" placeholder="your@email" required
+             autocomplete="email" autocapitalize="off" spellcheck="false">
 
-      }
+      <label class="opt">
+        <input type="checkbox" name="general" value="yes">
+        Also send me Shin Hanagata's other work (exhibitions, performances).
+      </label>
 
-      .text{
-        width: 90%;
-        padding: 10px;
-        margin: auto;
-
-        color: white;
-        border: 5px groove #666666;
-        background:
-    linear-gradient(to right, rgb(30,10,10), transparent),
-    url(https://grainy-gradients.vercel.app/noise.svg);
-  filter: contrast(200%) brightness(80%);
-
-
-
-      }
-      h1{
-        text-align: center;
-        font-size: 20px;
-      }
-      h2{
-        font-size: 16px;
-      }
-      p{
-        font-size: 14px;
-      }
-      ol{
-          font-size: 14px;
-      }
-      li{
-        font-size: 14px;
-      }
-      a{
-        color: rgb(0,255,0);
-      }
-
-
-
-    </style>
-
-  </head>
-  <body class="bgblink">
-    <header>
-      <!-- <div class="container">
-
-        <div class="menu-wrapper">
-          <div class="top-bar">
-            <a href="works/index.html" class="menu yugo">works</a>
-            <a href="bio/index.html" class="menu yugo">bio</a>
-          </div>
-        </div>
-      </div> -->
-    </header>
-    <div class="container">
-
-      <div class="toplogo">
-        <a href="q1.html">
-          <img class="logo" src="img/figure-col.png"/>
-        </a>
-
+      <div class="row">
+        <button type="submit" name="side" value="watch">WATCH</button>
+        <button type="submit" name="side" value="twist">TWIST</button>
+      </div>
+      <div class="btnnote">
+        <span>records &amp; updates</span>
+        <span>recipes &amp; next sessions</span>
       </div>
 
+      <div class="note">
+        One click to leave, anytime. No tracking.<br>
+        Shin Hanagata / CHIMERIA &mdash; Award of Distinction, Prix Ars Electronica 2026.<br>
+        Lentos Kunstmuseum Linz, Sep 9&ndash;13.
+      </div>
+    </form>
+
+    <div id="done" hidden>
+      <p style="color:rgb(255,26,26)">RECEIVED.</p>
+      <p>One mail is on its way. The first instruction is inside it.<br>
+         If it is not there in a minute, look in the spam folder.</p>
+      <p class="ja">メールを1通送りました。最初の指示はその中にあります。</p>
     </div>
 
+    <div id="failed" hidden>
+      <p style="color:rgb(255,80,80)">Could not reach the server.</p>
+      <p>Write to <a href="mailto:hngt.a@icloud.com">hngt.a@icloud.com</a> and you are in.</p>
+    </div>
+  </div>
 
+</div></div>
 
-        <!-- <div class="contact-wrapper">
-          <a href="https://www.facebook.com/shin.hanagata" class="contact"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://twitter.com/a_hngt" class="contact"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.instagram.com/hngt_a/" class="contact"><i class="fab fa-instagram"></i></a>
-          <a href="mailto:hngt.a&#64;icloud.com" class="contact"><i class="far fa-envelope"></i></a>
-        </div> -->
+<iframe name="sink" id="sink" style="display:none" title="submit target"></iframe>
 
+<footer>©︎2026 CHIMERIA</footer>
 
-        <!-- <div class="news">
-          <h3>INFO</h3>
-          <p>臼井達也との2人展「トランス・ペアレンタル・コントロール」を新宿眼科画廊にて3/26〜31に開催、新作《still human》を発表</p>
-          <p>オンライン展「第26回学生CGコンテストノミネート作品展」にて《Uber Existence》《Aseptic Kiss》が3/22より出展中</p>
-          <p>「KUMA EXHIBITION 2021」にて体験型パフォーマンス《鑑賞する代理身体》を3/19~20に実施、記録映像は4月末より公開予定</p>
-          <p>オンライン展「BECV.jp」にて記録映像作品《Uber Existenceで初詣》が1/23より公開中</p>
-          <h3>NEWS</h3>
-          <p class="when">2021/03/24</p><p class="what">《Uber Existence》が第26回学生CGコンテストアート部門にて、BRONZE / 市原えつこ評価員賞 受賞</p>
-          <p class="when">2020/12/11</p><p class="what">《Uber Existence》《Aseptic Kiss》が第26回学生CGコンテストアート部門にて、ノミネート</p>
-          <p class="when">2020/12/10</p><p class="what">《Uber Existence》が、WIRED CREATIVE HACK AWARD 2020にて、特別賞を受賞</p>
-          <p class="when">2020/11/04</p><p class="what">クマ財団のメディアにインタビュー記事が掲載 <a href="https://kuma-foundation.org/news/3287/">「身体拡張によって、人間の意識と価値観がどう変わっていくのかを探求する。〜4期生インタビュー Vol.11　花形 槙さん〜」</a></p>
-        </div> -->
+<script>
+// language from the device (zero taps) + submit handling
+(function(){
+  var l = (navigator.language || 'en').toLowerCase();
+  document.getElementById('f_lang').value = l.indexOf('ja') === 0 ? 'ja' : 'en';
 
+  var f = document.getElementById('f'),
+      sink = document.getElementById('sink'),
+      done = document.getElementById('done'),
+      failed = document.getElementById('failed'),
+      sent = false, timer = null;
 
-    <footer>
-      <br>
-      <!-- <div style="color:rgb(100,100,100); margin-top:42vh;">
-        ©︎2025 CHIMERIA</p>
-      </div> -->
+  function finish(ok){
+    if(!sent) return;
+    sent = false;
+    clearTimeout(timer);
+    f.hidden = true;
+    (ok ? done : failed).hidden = false;
+  }
 
+  f.addEventListener('submit', function(){
+    sent = true;
+    var b = f.querySelectorAll('button');
+    for(var i=0;i<b.length;i++) b[i].disabled = true;
+    timer = setTimeout(function(){ finish(false); }, 12000);
+  });
 
+  sink.addEventListener('load', function(){ finish(true); });
+})();
+</script>
+<script src="meat.js"></script>
 
-
-
-
-
-    </footer>
-  </body>
-  </html>
+</body>
+</html>
