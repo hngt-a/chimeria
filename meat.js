@@ -33,7 +33,7 @@
     '  vec3 c = texture2D(tex, uv2).rgb;' +
     // crush to a deep blood-red field so white type always reads
     '  c = pow(c, vec3(1.9));' +
-    '  c *= vec3(0.92, 0.30, 0.26);' +
+    '  c *= vec3(0.70, 0.23, 0.20);' +
     '  c *= 0.86 + 0.14*sin(t*0.6 + uv.y*2.5);' +
     '  gl_FragColor = vec4(c,1.0);' +
     '}';
