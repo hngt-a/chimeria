@@ -23,11 +23,37 @@ body{
   background:rgba(6,2,2,0.82);
 }
 
-.dedication{text-align:center;margin:4px 0 18px;line-height:0;}
+.dedication{text-align:center;margin:2px 0 20px;line-height:1;}
+.stretch{
+  display:inline-block;
+  transform:scaleY(1.75);
+  transform-origin:center;
+  margin:15px 0;
+  font-size:clamp(15px,6vw,26px);
+  font-weight:bold;
+  letter-spacing:-0.035em;
+  color:#00ff00;
+  white-space:nowrap;
+}
+.sw{position:relative;display:inline-block;}
+.sw b{font-weight:inherit;}
+#w_b{position:absolute;left:0;top:0;width:100%;text-align:center;visibility:hidden;}
+#w_b.static{position:static;width:auto;visibility:visible;}
 
 .box p{font-size:14px;line-height:1.7;margin:0 0 10px;}
 .box p:last-child{margin-bottom:0;}
-.ask{text-align:center;margin:0 0 14px;line-height:0;}
+.ask{text-align:center;margin:0 0 14px;line-height:1;}
+.askin{
+  display:inline-block;
+  transform:scaleY(1.3);
+  transform-origin:center;
+  margin:8px 0;
+  font-size:clamp(14px,4.6vw,19px);
+  font-weight:bold;
+  line-height:1.45;
+  letter-spacing:0.01em;
+  color:#fff;
+}
 .hit{color:rgb(255,26,26);letter-spacing:0.06em;}
 
 form{margin:14px 0 0;}
@@ -60,7 +86,18 @@ a{color:rgb(0,255,0);}
 footer{text-align:center;color:rgb(85,85,85);font-size:11px;padding:26px 14px 22px;}
 
 @media (max-width:360px){
-    .ask{text-align:center;margin:0 0 14px;line-height:0;}
+    .ask{text-align:center;margin:0 0 14px;line-height:1;}
+.askin{
+  display:inline-block;
+  transform:scaleY(1.3);
+  transform-origin:center;
+  margin:8px 0;
+  font-size:clamp(14px,4.6vw,19px);
+  font-weight:bold;
+  line-height:1.45;
+  letter-spacing:0.01em;
+  color:#fff;
+}
   .dedication{font-size:12px;letter-spacing:0.1em;}
 }
 
@@ -79,7 +116,6 @@ footer{text-align:center;color:rgb(85,85,85);font-size:11px;padding:26px 14px 22
 .sched{margin-top:16px;padding-top:14px;border-top:1px solid #4a3030;}
 .sched p{font-size:12.5px;line-height:1.75;color:rgb(205,205,205);}
 
-.jagcv{display:block;margin:0 auto;}
 .sh{color:#00ff00;letter-spacing:0.04em;}
 .dim{color:rgb(160,160,160);}
 .perf{width:100%;border-collapse:collapse;margin:4px 0 2px;}

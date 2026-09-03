@@ -27,13 +27,14 @@
     <img src="img/figure-web.png" alt="CHIMERIA">
   </div>
 
-  <div id="dedication" class="dedication">DEDICATED TO ALL CHIMERAS</div>
+  <p class="dedication"><span class="stretch">DEDICATED&nbsp;TO&nbsp;ALL
+    <span class="sw"><b id="w_a">CHIMERAS</b><b id="w_b">HUMANS</b></span></span></p>
 
   <div class="box">
 
     <form id="f" method="post" target="sink"
           action="https://script.google.com/macros/s/AKfycbyuYkowe6Fh24iZ6TuPUjS3g7fU74__CU9UkjFfzTLym5Yf4Rk-D9L8sYkOOMOOHrj8/exec">
-      <div id="ask" class="ask" data-text="Do you want to witness it or to be twisted?">DO YOU WANT TO WITNESS IT OR TO BE TWISTED?</div>
+      <p class="ask"><span class="askin">DO YOU WANT TO WITNESS IT OR TO BE TWISTED?</span></p>
 
       <input type="hidden" name="source" value="ars2026">
       <input type="hidden" name="lang" id="f_lang" value="en">
@@ -124,8 +125,30 @@
   sink.addEventListener('load', function(){ finish(true); });
 })();
 
+// CHIMERAS / HUMANS — 3フレームごとに入れ替える
+(function(){
+  var a = document.getElementById('w_a'),
+      b = document.getElementById('w_b');
+  if(!a || !b) return;
+  var still = window.matchMedia &&
+              window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(still){
+    b.className = 'static';
+    a.insertAdjacentText('afterend', ' / ');
+    return;
+  }
+  var n = 0, on = false;
+  (function tick(){
+    if(++n >= 3){
+      n = 0; on = !on;
+      a.style.visibility = on ? 'hidden' : 'visible';
+      b.style.visibility = on ? 'visible' : 'hidden';
+    }
+    requestAnimationFrame(tick);
+  })();
+})();
+
 </script>
 <script src="meat.js"></script>
-<script src="jag.js"></script>
 </body>
 </html>
