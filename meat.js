@@ -16,6 +16,7 @@
     'uniform float t;' +
     'uniform vec2 res;' +
     'uniform vec2 img;' +
+    'uniform float fl;' +
     'void main(){' +
     // cover-fit
     '  float ra=res.x/res.y, ia=img.x/img.y;' +
@@ -32,7 +33,7 @@
     '  uv2 = clamp(uv2, 0.001, 0.999);' +
     '  vec3 c = texture2D(tex, uv2).rgb;' +
     // 肉はそのまま。うねりだけ。ごく薄い明滅で生かす
-    '  c *= 0.96 + 0.04*sin(t*0.6 + uv.y*2.5);' +
+    '  c *= fl;' +
     '  gl_FragColor = vec4(c,1.0);' +
     '}';
 
@@ -59,7 +60,8 @@
 
   var uT = gl.getUniformLocation(pr, 't'),
       uR = gl.getUniformLocation(pr, 'res'),
-      uI = gl.getUniformLocation(pr, 'img');
+      uI = gl.getUniformLocation(pr, 'img'),
+      uF = gl.getUniformLocation(pr, 'fl');
 
   var tex = gl.createTexture();
   gl.bindTexture(gl.TEXTURE_2D, tex);
@@ -90,6 +92,7 @@
   size();
   window.addEventListener('resize', size);
 
+  var flip = false;
   var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var t0 = Date.now();
   function draw(){
@@ -97,6 +100,10 @@
     gl.uniform1f(uT, t);
     gl.uniform2f(uR, cv.width, cv.height);
     gl.uniform2f(uI, iw, ih);
+    // 高速の明滅。明↔暗を1フレームごとに振る（わずかに揺らす）
+    flip = !flip;
+    gl.uniform1f(uF, still ? 1.0
+      : (flip ? 1.18 + Math.random() * 0.16 : 0.50 + Math.random() * 0.14));
     gl.drawArrays(gl.TRIANGLES, 0, 3);
     if(!still || !ready) requestAnimationFrame(draw);
   }

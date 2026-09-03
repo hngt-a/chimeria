@@ -12,25 +12,32 @@ body{
 
 .container{width:100%;max-width:620px;margin:0 auto;padding:0 14px;}
 .wrap{padding:9vh 0 6vh;}
-.logo-wrap{text-align:center;margin-bottom:22px;}
-.logo-wrap img{width:62%;max-width:320px;height:auto;}
+.logo-wrap{text-align:center;margin-bottom:10px;}
+.logo-wrap img{width:92%;max-width:480px;height:auto;}
 
 .box{
   width:100%;
   margin:0 0 14px;
-  padding:20px 16px;
+  padding:14px 16px 18px;
   border:5px groove #666;
   background:rgba(6,2,2,0.82);
 }
 
 .dedication{
   text-align:center;
-  font-size:14px;
-  letter-spacing:0.16em;
-  color:#fff;
-  margin:0 0 14px;
-  padding:9px 8px;
-  background:rgba(0,0,0,0.55);
+  margin:2px 0 20px;
+  line-height:1;
+}
+.stretch{
+  display:inline-block;
+  transform:scaleY(1.75);
+  transform-origin:center;
+  margin:14px 0;
+  font-size:21px;
+  letter-spacing:-0.045em;
+  color:#00ff00;
+  white-space:nowrap;
+  filter:url(#jag);
 }
 .sw{position:relative;display:inline-block;}
 .sw b{font-weight:inherit;}
@@ -39,8 +46,9 @@ body{
 
 .box p{font-size:14px;line-height:1.7;margin:0 0 10px;}
 .box p:last-child{margin-bottom:0;}
-.ask{font-size:17px;line-height:1.6;color:#fff;margin:0 0 16px;text-align:center;}
-.hit{color:rgb(255,26,26);letter-spacing:0.06em;}
+.ask{font-size:17px;line-height:1.55;color:#fff;margin:0 0 14px;text-align:center;
+  filter:url(#jag);}
+.hit{color:rgb(255,26,26);letter-spacing:0.06em;filter:url(#jag);}
 
 form{margin:14px 0 0;}
 input[type=email]{
@@ -59,6 +67,7 @@ button{
   font-family:inherit;font-size:14.5px;letter-spacing:0.05em;
   color:#000;background:gray;
   border:3px outset #999;cursor:pointer;
+  filter:url(#jag);
 }
 button:active{border-style:inset;}
 
@@ -72,6 +81,7 @@ footer{text-align:center;color:rgb(85,85,85);font-size:11px;padding:26px 14px 22
 
 @media (max-width:360px){
     .ask{font-size:15px;}
+  .stretch{font-size:17px;}
   .dedication{font-size:12px;letter-spacing:0.1em;}
 }
 
