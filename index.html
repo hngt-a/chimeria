@@ -128,7 +128,7 @@
   sink.addEventListener('load', function(){ finish(true); });
 })();
 
-// CHIMERAS / HUMANS — 3フレームごとに入れ替える
+// CHIMERAS / HUMANS — 1〜5フレームのランダムな間隔で入れ替える
 (function(){
   var a = document.getElementById('w_a'),
       b = document.getElementById('w_b');
@@ -140,10 +140,11 @@
     a.insertAdjacentText('afterend', ' / ');
     return;
   }
-  var n = 0, on = false;
+  function gap(){ return 1 + Math.floor(Math.random() * 5); }
+  var n = 0, on = false, next = gap();
   (function tick(){
-    if(++n >= 3){
-      n = 0; on = !on;
+    if(++n >= next){
+      n = 0; next = gap(); on = !on;
       a.style.visibility = on ? 'hidden' : 'visible';
       b.style.visibility = on ? 'visible' : 'hidden';
     }
